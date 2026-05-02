@@ -50,7 +50,7 @@ export default function About() {
         <section className="bg-[#4b2c5e] text-white py-20 px-6">
           <div className="container mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              À propos de la Fédération
+              À propos de l’ASCo
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
               Découvrez l’histoire, la mission et les valeurs de Algerian
@@ -70,14 +70,7 @@ export default function About() {
                 </h2>
                 <div className="space-y-4 text-gray-700">
                   <p>
-                    Algerian Society of Cosmetology est une association à but
-                    non lucratif qui regroupe et représente les pharmaciens
-                    exerçant dans différents secteurs : officine, industrie,
-                    biologie, hôpital et recherche.
-                    <br />
-                    Elle œuvre pour la valorisation de la profession, le
-                    renforcement des compétences et la protection de la santé
-                    publique.
+                    En Algérie, l’industrie cosmétique connaît une croissance rapide : de nouveaux acteurs émergent, des marques locales se développent et la demande des consommateurs évolue vers plus de qualité, de transparence et de confiance. Pour accompagner cette dynamique, il devient essentiel de structurer la profession, d’harmoniser les pratiques et d’élever le niveau d’exigence scientifique et réglementaire. C’est dans ce contexte qu’est née l’Algerian Society of Cosmetology (ASCo) : une organisation indépendante, au service du savoir, de la sécurité et de l’innovation, qui place la science au cœur de la cosmétique algérienne
                   </p>
                 </div>
               </div>
@@ -106,51 +99,49 @@ export default function About() {
                 <h3 className="text-2xl font-semibold mb-6 text-yellow-300">
                   Nos Missions
                 </h3>
+                <h2>Former, informer pour transformer</h2>
+                <h1>L’ASCo œuvre à renforcer les compétences, encadrer les acteurs du secteur et faire émerger le savoirfaire algérien en cosmétologie.  Nous agissons pour :</h1>
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold mb-2">
-                      Représentation{" "}
+                      former, Informer, transformer{" "}
                     </h4>
                     <p>
-                      Porter la voix des pharmaciens auprès des institutions
-                      nationales et internationales.
+                      Développer le savoir et les compétences des acteurs du secteur et moderniser les pratiques de la cosmétologie en Algérie.
                     </p>
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2">
-                      Développement professionnel
+                      Encadrer et accompagner
                     </h4>
                     <p>
-                      Organiser des formations, congrès et ateliers pour
-                      renforcer les compétences des pharmaciens.
+                      Soutenir les professionnels dans leurs démarches de recherche et développement avec pour objectif l’efficacité, la sécurité et la qualité.  
                     </p>
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2">
-                      Santé publique
+                      Valoriser le savoir-faire algérien
                     </h4>
                     <p>
-                      Participer aux campagnes de prévention et sensibilisation
-                      pour améliorer la santé des citoyens.
+                      Rassembler les compétences, structurer les efforts et promouvoir l’excellence locale à l’international.
                     </p>
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2">
-                      Encadrement et réglementation
+                      Promouvoir l’éthique et la sécurité
                     </h4>
                     <p>
-                      Veiller au respect des textes législatifs et proposer des
-                      réformes adaptées aux évolutions du secteur.
+                      Garantir des pratiques respectueuses des normes scientifiques et réglementaires. 
                     </p>
                   </div>
 
                   <div>
                     <h4 className="text-lg font-semibold mb-2">
-                      Promotion de la recherche et de l’industrie
+                      Créer des passerelles entre science, société et régulation
                     </h4>
                     <p>
-                      Valoriser la recherche pharmaceutique nationale et
-                      encourager l’innovation en industrie.
+                      Servir la science, le public et les autorités par une approche collaborative et rigoureuse. 
+
                     </p>
                   </div>
                 </div>
@@ -160,43 +151,29 @@ export default function About() {
                 <h3 className="text-2xl font-semibold mb-6 text-yellow-300">
                   Nos valeurs
                 </h3>
+                <p>Rigueur. Indépendance. Ouverture. Au cœur de nos valeurs .</p>
+                <p>Notre action repose sur des principes clairs et intransigeants :</p>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-lg font-semibold mb-2">Engagement</h4>
+                    <h4 className="text-lg font-semibold mb-2">Rigueur scientifique</h4>
                     <p>
-                      Défendre les intérêts de la profession pharmaceutique et
-                      contribuer à l’amélioration continue de la santé en
-                      Algérie.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-2">Éthique</h4>
-                    <p>
-                      Promouvoir une pratique professionnelle responsable,
-                      respectueuse de la réglementation et des patients.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-2">Solidarité</h4>
-                    <p>
-                      Fédérer les pharmaciens autour d’une vision commune, dans
-                      un esprit de collaboration et de partage.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-2">Innovation</h4>
-                    <p>
-                      Encourager la recherche, la digitalisation et l’adoption
-                      de solutions modernes pour répondre aux besoins actuels et
-                      futurs.
-                    </p>
-                  </div>
+                      garante de crédibilité et de fiabilité avec la science et le savoir comme moteur de la démarche
 
+                    </p>
+                  </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2">Proximité</h4>
+                    <h4 className="text-lg font-semibold mb-2"> Indépendance et transparence</h4>
                     <p>
-                      Être à l’écoute des pharmaciens et des citoyens pour mieux
-                      répondre à leurs attentes.
+                      pour préserver l’intégrité et la confiance du secteur.
+
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">Ancrage local et ouverture sur le monde</h4>
+                    <p>
+                      pour conjuguer authenticité et excellence internationale. 
+
+
                     </p>
                   </div>
                 </div>
@@ -206,7 +183,7 @@ export default function About() {
         </section>
 
         {/* Chiffres clés */}
-        <section className="py-16 px-6 bg-white">
+       {/*  <section className="py-16 px-6 bg-white">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center text-[#4b2c5e] mb-12">
               L'association en chiffres
@@ -223,7 +200,7 @@ export default function About() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Équipe */}
         <section className="py-16 px-6 bg-[#ddd3e6]">
@@ -240,14 +217,28 @@ export default function About() {
               {/* Président */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
+                  style={{ backgroundImage: `url(${member5.src})` }}
+                  className="h-48 bg-center bg-contain bg-no-repeat bg-white "
+                ></div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[#4b2c5e] mb-1">
+                    Pr. Zebbiche Younes
+                  </h3>
+                  <p className="text-yellow-600 font-medium mb-4">Président</p>
+                </div>
+              </div>
+
+              {/* Président */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div
                   style={{ backgroundImage: `url(${member1.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
                 ></div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#4b2c5e] mb-1">
-                    Pr. Boudis Abdelhakim
+                    Touileb Chaimaa Neirouz
                   </h3>
-                  <p className="text-yellow-600 font-medium mb-4">Président</p>
+                  <p className="text-yellow-600 font-medium mb-4">Chargée de communication</p>
                 </div>
               </div>
 
@@ -259,10 +250,10 @@ export default function About() {
                 ></div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#4b2c5e] mb-1">
-                    Pr. Selka Mohamed Adil
+                    DAOUD Lamia
                   </h3>
                   <p className="text-yellow-600 font-medium mb-4">
-                    Vice-président 1
+                    Trésorière 
                   </p>
                 </div>
               </div>
@@ -275,10 +266,10 @@ export default function About() {
                 ></div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#4b2c5e] mb-1">
-                    Dr. Mezaour Yacine
+                    Boufatah Feriel
                   </h3>
                   <p className="text-yellow-600 font-medium mb-4">
-                    Vice-président 2
+                    Trésorière adjointe
                   </p>
                 </div>
               </div>
@@ -291,27 +282,15 @@ export default function About() {
                 ></div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#4b2c5e] mb-1">
-                    Pr. Achouri Mohamed Yacine
+                    Azrou Siham
                   </h3>
                   <p className="text-yellow-600 font-medium mb-4">
-                    Secrétaire Général
+                    Secrétaire générale
                   </p>
                 </div>
               </div>
 
-              {/* Trésorier */}
-              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <div
-                  style={{ backgroundImage: `url(${member5.src})` }}
-                  className="h-48 bg-center bg-contain bg-no-repeat bg-white "
-                ></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[#4b2c5e] mb-1">
-                    Pr. Zebbiche Younes
-                  </h3>
-                  <p className="text-yellow-600 font-medium mb-4">Trésorier</p>
-                </div>
-              </div>
+              
 
               {/* SG adjoint */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
@@ -321,10 +300,10 @@ export default function About() {
                 ></div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#4b2c5e] mb-1">
-                    Dr. Khouader Nassima
+                    Fiala Sarah
                   </h3>
                   <p className="text-yellow-600 font-medium mb-4">
-                    Secrétaire Général Adjoint
+                    Vice-président
                   </p>
                 </div>
               </div>
@@ -337,10 +316,40 @@ export default function About() {
                 ></div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#4b2c5e] mb-1">
-                    M. Lakhlef Oussama
+                    Hadjene Targuia
                   </h3>
                   <p className="text-yellow-600 font-medium mb-4">
-                    Trésorier Adjoint
+                    Vice-président
+                  </p>
+                </div>
+              </div>
+
+               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div
+                  style={{ backgroundImage: `url(${member7.src})` }}
+                  className="h-48 bg-center bg-contain bg-no-repeat bg-white "
+                ></div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[#4b2c5e] mb-1">
+                    NEHAL Chahinez
+                  </h3>
+                  <p className="text-yellow-600 font-medium mb-4">
+                    Vice-président
+                  </p>
+                </div>
+              </div>
+
+               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div
+                  style={{ backgroundImage: `url(${member7.src})` }}
+                  className="h-48 bg-center bg-contain bg-no-repeat bg-white "
+                ></div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[#4b2c5e] mb-1">
+                    Selka Adil
+                  </h3>
+                  <p className="text-yellow-600 font-medium mb-4">
+                    Vice-président
                   </p>
                 </div>
               </div>
@@ -349,7 +358,7 @@ export default function About() {
         </section>
 
         {/* Partenaires */}
-        <section className="py-16 px-6 bg-white">
+        {/* <section className="py-16 px-6 bg-white">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center text-[#4b2c5e] mb-12">
               Nos partenaires
@@ -372,7 +381,7 @@ export default function About() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA */}
         <section className="py-16 px-6 bg-[#6a4a7d] text-white">

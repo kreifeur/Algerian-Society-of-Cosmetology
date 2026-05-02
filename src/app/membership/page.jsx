@@ -94,42 +94,37 @@ export default function Membership() {
   ];
 
   const benefits = [
-    {
-      icon: "🎓",
-      title: "Formations continues",
-      description:
-        "Accédez à des formations de qualité pour développer vos compétences",
-    },
-    {
-      icon: "🤝",
-      title: "Réseau professionnel",
-      description:
-        "Échangez avec des experts du secteur et développez votre réseau",
-    },
-    {
-      icon: "📅",
-      title: "Événements exclusifs",
-      description:
-        "Participez à nos congrès, séminaires et rencontres professionnelles",
-    },
-    {
-      icon: "📚",
-      title: "Ressources documentaires",
-      description:
-        "Accédez à notre bibliothèque de ressources et publications exclusives",
-    },
-    {
-      icon: "🔍",
-      title: "Veille réglementaire",
-      description:
-        "Restez informé des dernières évolutions réglementaires du secteur",
-    },
-    {
-      icon: "🏆",
-      title: "Reconnaissance professionnelle",
-      description: "Bénéficiez d'une certification reconnue dans le secteur",
-    },
-  ];
+  {
+    icon: "🎓",
+    title: "Formations & webinaires",
+    description:
+      "Participez à des formations continues et webinaires pour renforcer vos compétences.",
+  },
+  {
+    icon: "💸",
+    title: "Tarifs préférentiels",
+    description:
+      "Bénéficiez de réductions sur les frais d’inscription à nos événements scientifiques et professionnels.",
+  },
+  {
+    icon: "💼",
+    title: "Opportunités professionnelles",
+    description:
+      "Accédez à des offres de stage et d’emploi dans le secteur de la cosmétologie.",
+  },
+  {
+    icon: "🌐",
+    title: "Espace membre dédié",
+    description:
+      "Profitez d’un accès exclusif à votre espace personnel sur le site de l’ASCo.",
+  },
+  {
+    icon: "📰",
+    title: "Newsletter & actualités",
+    description:
+      "Recevez régulièrement nos informations, publications et actualités du secteur.",
+  },
+];
 
   const getPlanAmount = () => {
     const plan = membershipPlans.find((p) => p.id === selectedPlan);
@@ -354,9 +349,8 @@ export default function Membership() {
             Devenez membre
           </h1>
           <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12">
-            Rejoignez notre communauté de professionnels de la pharmacie et
-            bénéficiez d'avantages exclusifs, de ressources spécialisées et d'un
-            réseau de qualité pour accompagner votre développement
+            Rejoindre l’Algerian Society of Cosmetology (ASCo), c’est faire partie d’une communauté scientifique et professionnelle dédiée à l’évolution de la cosmétologie en Algérie.
+
           </p>
 
           {!isSubmitted ? (

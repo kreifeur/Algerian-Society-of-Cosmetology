@@ -4,10 +4,10 @@ const Hero = () => {
     <section className="relative  bg-[#4b2c5e] text-white py-20 px-6">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Bienvenue à Algerian Society of Cosmetology
+          Bienvenue à l’Algerian Society of Cosmetology
         </h2>
         <p className="text-xl max-w-2xl mx-auto mb-8">
-          Excellence, Engagement, Santé
+          Former, informer pour transformer
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a

@@ -1,11 +1,10 @@
 // components/Membership.js
 const Membership = () => {
   const benefits = [
-    "Accès à tous nos événements à tarif préférentiel",
-    "Formations continues et développement professionnel",
-    "Opportunités de réseautage avec les experts du secteur",
-    "Accès à l’espace membre et à des ressources exclusives",
-    "Réception régulière de la revue professionnelle",
+    "Intégrer une communauté de professionnels engagés",
+    "Accéder à des événements scientifiques, formations et congrès",
+    "Participer activement au développement de la cosmétologie en Algérie",
+    "Contribuer à des projets à impact réel et durable",
   ];
 
   return (
@@ -17,8 +16,12 @@ const Membership = () => {
 
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-lg mb-6">
-            Rejoignez notre communauté de professionnels et bénéficiez des
-            avantages exclusivement réservés à nos membres :
+            La cosmétologie algérienne évolue, se structure et se
+            professionnalise. Et vous pouvez en faire partie. Notre mission est
+            d’accompagner le développement d’une cosmétologie algérienne fondée
+            sur la rigueur scientifique, l’éthique et la sécurité, en mettant en
+            avant la recherche, l’innovation et les compétences locales.
+            Pourquoi adhérer ?
           </p>
 
           <ul className="list-disc list-inside text-left mb-8 space-y-2 mx-auto max-w-md">

@@ -135,8 +135,8 @@ export default function BlogList() {
           <section className="w-full mb-8 text-center">
             <h1 className="text-4xl font-bold text-[#4b2c5e] mb-4">Blog</h1>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Découvrez les dernières tendances, les conseils d'experts et
-              l'actualité du monde pharmaceutique
+             Accédez à des analyses, des actualités et des éclairages d’experts en cosmétologie.
+
             </p>
           </section>
 

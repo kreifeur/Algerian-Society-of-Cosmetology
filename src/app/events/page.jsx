@@ -430,9 +430,7 @@ export default function Events() {
             Événements
           </h1>
           <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12">
-            Découvrez notre programme d'événements : congrès, ateliers
-            pratiques, formations et sessions de networking, conçus pour tous
-            les professionnels du secteur pharmaceutique.
+            Un programme d’événements conçu pour accompagner l’évolution et l’excellence en cosmétologie.
           </p>
 
           {/* Filtres */}

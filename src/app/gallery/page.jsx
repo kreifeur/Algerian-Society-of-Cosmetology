@@ -323,8 +323,7 @@ export default function Gallery() {
             Galerie
           </h1>
           <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-4">
-            Découvrez les moments forts de nos événements, ateliers et
-            rencontres à travers notre galerie photos et vidéos.
+            Explorez les temps forts de l’ASCo : événements, formations et rencontres qui façonnent la cosmétologie en Algérie.
           </p>
 
           {/* Loading state */}

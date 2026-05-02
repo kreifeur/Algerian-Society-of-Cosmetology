@@ -2,22 +2,27 @@
 const Services = () => {
   const services = [
     {
-      icon: "👥",
-      title: "Réseau professionnel",
+      icon: "",
+      title: "Des formations spécialisées et actualisées",
       description:
-        "Rejoignez un réseau de professionnels passionnés et échangez sur les meilleures pratiques du secteur.",
+        "",
     },
     {
-      icon: "🎓",
-      title: "Formations continues",
+      icon: "",
+      title: "Un accès à un réseau de professionnels, chercheurs et experts du domaine",
       description:
-        "Accédez à des formations de qualité pour développer vos compétences et rester à la pointe.",
+        "",
     },
     {
-      icon: "📅",
-      title: "Événements exclusifs",
+      icon: "",
+      title: "Une veille scientifique et réglementaire",
+      description: ""
+    },
+    {
+      icon: "",
+      title: "Des opportunités de collaboration et de valorisation des compétences",
       description:
-        "Participez à nos congrès, séminaires et rencontres professionnelles tout au long de l'année.",
+        "",
     },
   ];
 
@@ -25,7 +30,7 @@ const Services = () => {
     <section className="py-16 px-6 bg-[#ddd3e6]">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#4b2c5e]">
-          Nos services
+          Nos Actions
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

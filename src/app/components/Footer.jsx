@@ -15,34 +15,26 @@ const Footer = () => {
               Algerian Society of Cosmetology
             </h3>
             <p className="mb-4">
-              Algerian Society of Cosmetology est une une association à but non
-              lucratif qui regroupe et représente les pharmaciens exerçant dans
-              différents secteurs
+              L’Algerian Society of Cosmetology (ASCo) est une association pionnière, créée pour structurer, encadrer et valoriser le secteur de la cosmétique en Algérie. Dans un pays où le marché cosmétique est en plein essor, ASCo agit comme un catalyseur de compétence, d’innovation et d’éthique professionnelle. Notre ambition est de placer l’Algérie sur la carte mondiale de la cosmétologie scientifique, en rassemblant les talents, les savoir-faire et les initiatives du secteur
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://web.facebook.com/Fapdz/"
+                href="https://www.facebook.com/profile.php?id=61584485739532"
                 className="h-10 w-10 bg-[#4b2c5e] rounded-full flex items-center justify-center hover:bg-[#4b2c5e] transition-colors"
               >
                 <span className="sr-only">Facebook</span>
                 <FaFacebookF />
               </a>
+
               <a
-                href="#"
-                className="h-10 w-10 bg-[#4b2c5e] rounded-full flex items-center justify-center hover:bg-[#4b2c5e] transition-colors"
-              >
-                <span className="sr-only">Twitter</span>
-                <FaTwitter />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/asco-%E2%80%93-algerian-society-of-cosmetology/"
                 className="h-10 w-10 bg-[#4b2c5e] rounded-full flex items-center justify-center hover:bg-[#4b2c5e] transition-colors"
               >
                 <span className="sr-only">LinkedIn</span>
                 <FaLinkedin />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/asco_cosmetology/"
                 className="h-10 w-10 bg-[#4b2c5e] rounded-full flex items-center justify-center hover:bg-[#4b2c5e] transition-colors"
               >
                 <span className="sr-only">Instagram</span>
@@ -98,11 +90,10 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
             <address className="not-italic">
               <p className="mb-2">
-                Chez pharma invest , Centre commercial et des affaires ElQods
-                cheraga , Alger .
+                 Siège : Cité essalah local n°01 Birkhadem, Alger .
               </p>
               <p className="mb-2">Tél: +213 550 51 07</p>
-              <p className="mb-2">Email: contact@Fapharmacie.dz</p>
+              <p className="mb-2">Email: algeriansocietyofcosmetology@gmail.com </p>
             </address>
           </div>
         </div>

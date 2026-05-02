@@ -98,8 +98,7 @@ export default function Contact() {
             Contactez-nous
           </h1>
           <p className="text-lg text-center text-gray-700 max-w-2xl mx-auto mb-12">
-            Nous sommes à votre disposition pour répondre à toutes vos questions
-            concernant l'association, l'adhésion ou nos événements.
+            Notre équipe vous accompagne pour toute question liée à l’ASCo.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -258,9 +257,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-medium text-gray-900">Adresse</h3>
                       <p className="text-gray-700">
-                        Chez pharma invest , Centre commercial et des affaires
-                        ElQods cheraga , Alger .
-                      </p>
+                        Siège : Cité essalah local n°01 Birkhadem, Alger .                      </p>
                     </div>
                   </div>
 
@@ -280,7 +277,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-medium text-gray-900">Email</h3>
-                      <p className="text-gray-700">dr.y.zebbiche@gmail.com</p>
+                      <p className="text-gray-700">algeriansocietyofcosmetology@gmail.com</p>
                     </div>
                   </div>
 
@@ -307,28 +304,21 @@ export default function Contact() {
 
                 <div className="flex space-x-4">
                   <a
-                    href="https://web.facebook.com/Fapdz/"
+                    href="https://www.facebook.com/profile.php?id=61584485739532"
                     className="h-12 w-12 bg-[#4b2c5e] text-white rounded-full flex items-center justify-center hover:bg-[#4b2c5e] transition-colors"
                   >
                     <span className="sr-only">Facebook</span>
                     <FaFacebookF className="w-5 h-5" />
                   </a>
                   <a
-                    href="#"
-                    className="h-12 w-12 bg-[#4b2c5e] text-white rounded-full flex items-center justify-center hover:bg-[#4b2c5e] transition-colors"
-                  >
-                    <span className="sr-only">Twitter</span>
-                    <FaTwitter className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="#"
+                    href="https://www.linkedin.com/company/asco-%E2%80%93-algerian-society-of-cosmetology/"
                     className="h-12 w-12 bg-[#4b2c5e] text-white rounded-full flex items-center justify-center hover:bg-[#4b2c5e] transition-colors"
                   >
                     <span className="sr-only">LinkedIn</span>
                     <FaLinkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/asco_cosmetology/"
                     className="h-12 w-12 bg-[#4b2c5e] text-white rounded-full flex items-center justify-center hover:bg-[#4b2c5e] transition-colors"
                   >
                     <span className="sr-only">Instagram</span>
@@ -365,44 +355,33 @@ export default function Contact() {
                   Comment devenir membre de l'association ?
                 </h3>
                 <p className="text-gray-700">
-                  Vous pouvez devenir membre en remplissant le formulaire
-                  d'adhésion en ligne sur notre site. Notre équipe vous
-                  contactera ensuite pour finaliser votre inscription.
+                  Vous pouvez devenir membre en remplissant le formulaire d'adhésion en ligne sur notre site. Notre équipe vous contactera ensuite pour finaliser votre inscription.
+
                 </p>
               </div>
 
               <div className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-lg font-medium text-[#4b2c5e] mb-2">
-                  Quels sont les avantages d'être membre ?
+                 Comment accéder à mon espace membre ?
                 </h3>
                 <p className="text-gray-700">
-                  Nos membres bénéficient d'accès privilégié à nos événements,
-                  de tarifs préférentiels sur les formations, de ressources
-                  exclusives et d'un réseau professionnel de qualité.
+                  Dès que votre paiement est confirmé, vous recevez un email avec vos identifiants pour accéder à votre espace membre sur notre site
+
                 </p>
               </div>
 
               <div className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-lg font-medium text-[#4b2c5e] mb-2">
-                  Comment participer à vos événements ?
+                 Quand vais-je recevoir ma carte de membre ? 
+
                 </h3>
                 <p className="text-gray-700">
-                  Consultez notre calendrier d'événements et inscrivez-vous en
-                  ligne. Les membres bénéficient de tarifs préférentiels et d'un
-                  accès prioritaire à certaines activités.
+                  Votre carte de membre sera envoyée dans les 10 jours ouvrables suivant la validation de votre paiement. Vous recevrez un email de confirmation avec un suivi de livraison.
+
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-lg font-medium text-[#4b2c5e] mb-2">
-                  Proposez-vous des formations ?
-                </h3>
-                <p className="text-gray-700">
-                  Oui, nous organisons régulièrement des formations continues
-                  pour les professionnels de la cosmétologie. Consultez notre
-                  section Événements pour découvrir notre programme.
-                </p>
-              </div>
+
             </div>
           </div>
         </div>
