@@ -3,13 +3,15 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import aboutimage from "../../../public/FB_IMG_1773061832719.jpg";
-import member1 from "../../../public/_R4A4361.JPG";
-import member2 from "../../../public/_R4A3926.JPG";
-import member3 from "../../../public/_R4A4037.JPG";
-import member4 from "../../../public/_R4A4291.JPG";
-import member5 from "../../../public/_R4A4601.JPG";
-import member6 from "../../../public/nassima.jpeg";
-import member7 from "../../../public/membr.jpg";
+import member1 from "../../../public/Selka.jpg";
+import member2 from "../../../public/Terguia.JPG";
+import member3 from "../../../public/Touileb.JPG";
+import member4 from "../../../public/Nehal.JPG";
+import member5 from "../../../public/Fiala.JPG";
+import member6 from "../../../public/Azrou.JPG";
+import member7 from "../../../public/Boufateh.JPG";
+import member8 from "../../../public/Daoud.JPG";
+import member9 from "../../../public/Zebbiche.JPG";
 
 export default function About() {
   // Données de l'équipe
@@ -217,7 +219,7 @@ export default function About() {
               {/* Président */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
-                  style={{ backgroundImage: `url(${member5.src})` }}
+                  style={{ backgroundImage: `url(${member9.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
                 ></div>
                 <div className="p-6">
@@ -231,7 +233,7 @@ export default function About() {
               {/* Président */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
-                  style={{ backgroundImage: `url(${member1.src})` }}
+                  style={{ backgroundImage: `url(${member3.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
                 ></div>
                 <div className="p-6">
@@ -245,7 +247,7 @@ export default function About() {
               {/* Vice président 1 */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
-                  style={{ backgroundImage: `url(${member2.src})` }}
+                  style={{ backgroundImage: `url(${member8.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
                 ></div>
                 <div className="p-6">
@@ -261,7 +263,7 @@ export default function About() {
               {/* Vice président 2 */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
-                  style={{ backgroundImage: `url(${member3.src})` }}
+                  style={{ backgroundImage: `url(${member7.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
                 ></div>
                 <div className="p-6">
@@ -277,7 +279,7 @@ export default function About() {
               {/* SG */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
-                  style={{ backgroundImage: `url(${member4.src})` }}
+                  style={{ backgroundImage: `url(${member6.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
                 ></div>
                 <div className="p-6">
@@ -295,7 +297,7 @@ export default function About() {
               {/* SG adjoint */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
-                  style={{ backgroundImage: `url(${member6.src})` }}
+                  style={{ backgroundImage: `url(${member5.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
                 ></div>
                 <div className="p-6">
@@ -311,7 +313,7 @@ export default function About() {
               {/* Trésorier Adjoint */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
-                  style={{ backgroundImage: `url(${member7.src})` }}
+                  style={{ backgroundImage: `url(${member2.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
                 ></div>
                 <div className="p-6">
@@ -326,7 +328,7 @@ export default function About() {
 
                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
-                  style={{ backgroundImage: `url(${member7.src})` }}
+                  style={{ backgroundImage: `url(${member4.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
                 ></div>
                 <div className="p-6">
@@ -341,7 +343,7 @@ export default function About() {
 
                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
-                  style={{ backgroundImage: `url(${member7.src})` }}
+                  style={{ backgroundImage: `url(${member1.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
                 ></div>
                 <div className="p-6">
