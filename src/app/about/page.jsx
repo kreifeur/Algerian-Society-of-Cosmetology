@@ -9,7 +9,7 @@ import member3 from "../../../public/Touileb.JPG";
 import member4 from "../../../public/Nehal.JPG";
 import member5 from "../../../public/Fiala.JPG";
 import member6 from "../../../public/Azrou.JPG";
-import member7 from "../../../public/Boufateh.JPG";
+import member7 from "../../../public/Boufateh.jpg";
 import member8 from "../../../public/Daoud.JPG";
 import member9 from "../../../public/Zebbiche.JPG";
 
