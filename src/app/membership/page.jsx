@@ -624,7 +624,7 @@ export default function Membership() {
                   {/* ReCAPTCHA */}
                   <div className="mb-8">
                     <div className="flex justify-center">
-                      <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LcVVlQsAAAAAAzjUdbl4n2fYmCTUsfPLKeppt_U"} onChange={handleRecaptchaChange} />
+                      <ReCAPTCHA ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LdksessAAAAAJZaxxicLB4q7n9ZbtoD2Ad6rLal"} onChange={handleRecaptchaChange} />
                     </div>
                   </div>
 
