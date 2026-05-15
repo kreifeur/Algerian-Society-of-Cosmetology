@@ -1,5 +1,6 @@
 // components/Header.js
 "use client";
+import { BsQrCode } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import logo from "../../../public/logo.png";
@@ -204,6 +205,13 @@ const Header = () => {
                     Annuaire
                   </Link>
 
+                   <Link
+                    href="/dashboard/qr-code"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
+                  >
+                    QR code
+                  </Link>
+
                   <div className="border-t border-gray-100 my-1"></div>
                   <button
                     onClick={handleLogout}
@@ -213,6 +221,12 @@ const Header = () => {
                   </button>
                 </div>
               </div>
+               <Link
+                href="/dashboard/qr-code"
+                className=""
+              >
+                <BsQrCode className="text-2xl" />
+              </Link>
             </div>
           ) : (
             <>
@@ -232,15 +246,36 @@ const Header = () => {
           )}
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-2xl"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
+           {isConnected ? (
+  <div className="md:hidden flex items-center gap-3">
+    
+
+    <button
+      className="md:hidden text-2xl"
+      onClick={() => setIsMenuOpen(!isMenuOpen)}
+      aria-label="Toggle menu"
+    >
+      ☰
+    </button>
+
+    <Link href="/dashboard/qr-code" className="">
+      <BsQrCode className="text-2xl" />
+    </Link>
+  </div>
+) : (
+  <button
+    className="md:hidden text-2xl"
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
+    aria-label="Toggle menu"
+  >
+    ☰
+  </button>
+)}
+
+
       </div>
+
+   
 
       {/* Mobile Menu */}
       {isMenuOpen && (
