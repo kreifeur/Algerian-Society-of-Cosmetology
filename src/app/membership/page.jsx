@@ -222,6 +222,7 @@ export default function Membership() {
       const registerData = {
         email: formData.email,
         password: formData.password,
+        confirmPassword: formData.confirmPassword,
         firstName: formData.firstName,
         lastName: formData.lastName,
         phone: formData.phone,
