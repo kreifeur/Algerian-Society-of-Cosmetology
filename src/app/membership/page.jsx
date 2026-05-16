@@ -242,6 +242,7 @@ export default function Membership() {
         paymentMethod: selectedPaymentMethod,
         amount: getPlanAmount(),
         consentDataProtection: formData.consentDataProtection,
+        acceptTerms: true,
       };
 
       console.log(registerData);
