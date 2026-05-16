@@ -1161,7 +1161,7 @@ export default function Membership() {
                         ref={recaptchaRef}
                         sitekey={
                           process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ||
-                          "6LcVVlQsAAAAAAzjUdbl4n2fYmCTUsfPLKeppt_U"
+                          "6Lf6VFgsAAAAAOS2vK0x_RDFSNPCq74QFxpBPn_u"
                         }
                         onChange={handleRecaptchaChange}
                       />
