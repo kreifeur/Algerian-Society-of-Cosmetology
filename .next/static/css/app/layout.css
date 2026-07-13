@@ -1513,6 +1513,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
 }
+.bg-gray-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
+}
 .bg-opacity-30{
   --tw-bg-opacity: 0.3;
 }
@@ -1527,6 +1531,9 @@ video {
 }
 .bg-opacity-95{
   --tw-bg-opacity: 0.95;
+}
+.bg-opacity-40{
+  --tw-bg-opacity: 0.4;
 }
 .bg-gradient-to-b{
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));

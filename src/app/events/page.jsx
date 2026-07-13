@@ -188,7 +188,26 @@ export default function Events() {
     }
   };
 
+  // Fonction pour vérifier si un événement est passé
+  const isPastEventCheck = (event) => {
+    if (!event.startDate) return false;
+    try {
+      const eventDate = new Date(event.startDate);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return eventDate < today;
+    } catch (error) {
+      return false;
+    }
+  };
+
   const handleRegister = async (event) => {
+    // Vérifier si l'événement est passé
+    if (isPastEventCheck(event)) {
+      alert("❌ Cet événement est déjà passé, vous ne pouvez pas vous inscrire.");
+      return;
+    }
+
     try {
       setRegisteringEvent(event._id);
 
@@ -331,7 +350,8 @@ export default function Events() {
                 ? "❌ Vous n'êtes pas inscrit - Statut: Disponible (Gratuit)"
                 : "❌ Vous n'êtes pas inscrit - Statut: Disponible (Payant)"
             : "🔐 Connectez-vous pour vous inscrire"
-        }`,
+        }` +
+        (isPastEventCheck(event) ? `\n\n📅 Cet événement est déjà passé.` : ""),
     );
   };
 
@@ -374,6 +394,11 @@ export default function Events() {
   };
 
   const getButtonText = (event) => {
+    // Si l'événement est passé, afficher "Événement passé"
+    if (isPastEventCheck(event)) {
+      return "Événement passé";
+    }
+    
     if (event.status === "registered") {
       return "Inscrit";
     }
@@ -390,6 +415,11 @@ export default function Events() {
   };
 
   const isButtonDisabled = (event) => {
+    // Désactiver le bouton si l'événement est passé
+    if (isPastEventCheck(event)) {
+      return true;
+    }
+    
     return (
       event.status === "registered" ||
       (event.maxParticipants &&
@@ -488,14 +518,17 @@ export default function Events() {
                 const maxParticipants = event.maxParticipants || "Illimité";
                 const isFreeEvent =
                   event.memberPrice === 0 && event.nonMemberPrice === 0;
+                const isPast = isPastEventCheck(event);
 
                 return (
                   <div
                     key={getEventKey(event, index)}
-                    className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                    className={`bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow ${
+                      isPast ? "opacity-75" : ""
+                    }`}
                   >
                     {/* Event image */}
-                    <div className="h-48 bg-gray-200 flex items-center justify-center">
+                    <div className="h-48 bg-gray-200 flex items-center justify-center relative">
                       {event.imgUrl ? (
                         <img
                           src={event.imgUrl}
@@ -508,12 +541,19 @@ export default function Events() {
                           <span className="text-sm">Image non disponible</span>
                         </div>
                       )}
+                      {isPast && (
+                        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                          <span className="bg-gray-800 text-white px-4 py-2 rounded-lg text-lg font-semibold">
+                            Événement passé
+                          </span>
+                        </div>
+                      )}
                     </div>
 
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-3">
                         <div>
-                          <div className="flex items-center gap-2 mb-2">
+                          <div className="flex items-center gap-2 mb-2 flex-wrap">
                             <span className="inline-block px-3 py-1 bg-blue-100 text-[#4b2c5e] rounded-full text-sm font-medium">
                               {formatCategory(event.category)}
                             </span>
@@ -525,6 +565,11 @@ export default function Events() {
                             {!isFreeEvent && (
                               <span className="inline-block px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">
                                 💰 Payant
+                              </span>
+                            )}
+                            {isPast && (
+                              <span className="inline-block px-2 py-1 bg-gray-400 text-white rounded-full text-xs">
+                                📅 Passé
                               </span>
                             )}
                           </div>
@@ -550,7 +595,7 @@ export default function Events() {
                       </p>
 
                       {/* Badges pour événement spécial */}
-                      <div className="flex gap-2 mb-4">
+                      <div className="flex gap-2 mb-4 flex-wrap">
                         {event.isOnline && (
                           <span className="inline-block px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">
                             🌐 En ligne
@@ -580,7 +625,9 @@ export default function Events() {
                           onClick={() => handleRegister(event)}
                           disabled={isDisabled}
                           className={`px-4 py-2 rounded-md text-sm font-medium flex items-center justify-center min-w-[120px] ${
-                            event.status === "registered"
+                            isPast
+                              ? "bg-gray-400 text-white cursor-not-allowed"
+                              : event.status === "registered"
                               ? "bg-green-600 text-white hover:bg-green-700"
                               : "bg-[#4b2c5e] text-white hover:bg-[#4b2c5e]"
                           } transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed`}
@@ -613,7 +660,7 @@ export default function Events() {
                         </button>
                         <button
                           onClick={() => handleViewDetails(event)}
-                          className="px-4 py-2 border border-bg-[#4b2c5e] text-[#4b2c5e] rounded-md hover:bg-[#ddd3e6] transition-colors text-sm font-medium"
+                          className="px-4 py-2 border border-[#4b2c5e] text-[#4b2c5e] rounded-md hover:bg-[#ddd3e6] transition-colors text-sm font-medium"
                         >
                           Détails
                         </button>
