@@ -329,29 +329,24 @@ export default function Events() {
 
     alert(
       `Détails de l'événement:\n\n` +
-        `📌 ${event.title}\n\n` +
-        `📝 ${event.description || "Aucune description"}\n\n` +
-        `📅 Date de début: ${formatDate(event.startDate)}\n` +
-        (event.endDate
-          ? `📅 Date de fin: ${formatDate(event.endDate)}\n`
-          : "") +
-        `⏰ Heure: ${formatTime(event.startDate)}\n` +
-        `📍 Lieu: ${event.location || "Lieu à confirmer"}\n` +
-        (event.isOnline ? `🌐 Événement en ligne\n` : "") +
-        (event.isMemberOnly ? `🔒 Réservé aux membres seulement\n` : "") +
-        `👥 Participants: ${participantsCount}/${maxParticipants}\n` +
-        `💰 ${priceInfo}\n` +
-        `📋 Catégorie: ${formatCategory(event.category)}\n` +
+        `${event.title}\n\n` +
+        `${event.description || "Aucune description"}\n\n` +
+        `Date de début: ${formatDate(event.startDate)}\n` +
+        `Lieu: ${event.location || "Lieu à confirmer"}\n` +
+        (event.isOnline ? `Événement en ligne\n` : "") +
+        (event.isMemberOnly ? `Réservé aux membres seulement\n` : "") +
+        `${priceInfo}\n` +
+        `Catégorie: ${formatCategory(event.category)}\n` +
         `${
           isConnected
             ? isRegistered
-              ? "✅ Vous êtes inscrit à cet événement"
+              ? "Vous êtes inscrit à cet événement"
               : isFreeEvent
-                ? "❌ Vous n'êtes pas inscrit - Statut: Disponible (Gratuit)"
-                : "❌ Vous n'êtes pas inscrit - Statut: Disponible (Payant)"
-            : "🔐 Connectez-vous pour vous inscrire"
+                ? "Vous n'êtes pas inscrit - Statut: Disponible (Gratuit)"
+                : "Vous n'êtes pas inscrit - Statut: Disponible (Payant)"
+            : "Connectez-vous pour vous inscrire"
         }` +
-        (isPastEventCheck(event) ? `\n\n📅 Cet événement est déjà passé.` : ""),
+        (isPastEventCheck(event) ? `\n\n Cet événement est déjà passé.` : ""),
     );
   };
 
