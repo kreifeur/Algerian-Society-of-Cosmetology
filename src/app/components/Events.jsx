@@ -348,22 +348,22 @@ const Events = () => {
 
     alert(
       `Détails de l'événement:\n\n` +
-        `📌 ${event.title}\n\n` +
-        `📝 ${event.description || "Aucune description"}\n\n` +
-        `📅 Date de début: ${formatDateTime(event.startDate)}\n` +
-        `📍 Lieu: ${event.location}\n` +
-        (event.isOnline ? `🌐 Événement en ligne\n` : "") +
-        (event.isMemberOnly ? `🔒 Réservé aux membres seulement\n` : "") +
-        `👥 Participants: ${participantsCount}/${maxParticipants}\n` +
-        `💰 ${priceInfo}\n` +
+        `${event.title}\n\n` +
+        
+        `${event.description || "Aucune description"}\n\n` +
+        `Date de début: ${formatDateTime(event.startDate)}\n` +
+        `Lieu: ${event.location}\n` +
+        (event.isOnline ? `Événement en ligne\n` : "") +
+        (event.isMemberOnly ? `Réservé aux membres seulement\n` : "") +
+        `${priceInfo}\n` +
         `${
           isConnected
             ? isRegistered
-              ? "✅ Vous êtes inscrit à cet événement"
+              ? "Vous êtes inscrit à cet événement"
               : isFreeEvent
-                ? "❌ Vous n'êtes pas inscrit - Statut: Disponible (Gratuit)"
-                : "❌ Vous n'êtes pas inscrit - Statut: Disponible (Payant)"
-            : "🔐 Connectez-vous pour vous inscrire"
+                ? "Vous n'êtes pas inscrit - Statut: Disponible (Gratuit)"
+                : "Vous n'êtes pas inscrit - Statut: Disponible (Payant)"
+            : "Connectez-vous pour vous inscrire"
         }`,
     );
   };
