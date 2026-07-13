@@ -120,37 +120,37 @@ export default function Membership() {
 
   const benefits = [
     {
-      icon: "🎓",
+      icon: "",
       title: "Formations continues",
       description:
         "Accédez à des formations de qualité pour développer vos compétences",
     },
     {
-      icon: "🤝",
+      icon: "",
       title: "Réseau professionnel",
       description:
         "Échangez avec des experts du secteur et développez votre réseau",
     },
     {
-      icon: "📅",
+      icon: "",
       title: "Événements exclusifs",
       description:
         "Participez à nos congrès, séminaires et rencontres professionnelles",
     },
     {
-      icon: "📚",
+      icon: "",
       title: "Ressources documentaires",
       description:
         "Accédez à notre bibliothèque de ressources et publications exclusives",
     },
     {
-      icon: "🔍",
+      icon: "",
       title: "Veille réglementaire",
       description:
         "Restez informé des dernières évolutions réglementaires du secteur",
     },
     {
-      icon: "🏆",
+      icon: "",
       title: "Reconnaissance professionnelle",
       description: "Bénéficiez d'une certification reconnue dans le secteur",
     },

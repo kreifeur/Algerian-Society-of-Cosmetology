@@ -386,7 +386,7 @@ export default function Login() {
               </div>
             </div>
 
-            <div className="mt-6 p-4 bg-[#ddd3e6] rounded-md border border-blue-100">
+           {/*  <div className="mt-6 p-4 bg-[#ddd3e6] rounded-md border border-blue-100">
               <h3 className="text-sm font-medium text-[#4b2c5e] mb-2">
                 Comptes de démonstration
               </h3>
@@ -416,7 +416,7 @@ export default function Login() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="mt-8 text-center">

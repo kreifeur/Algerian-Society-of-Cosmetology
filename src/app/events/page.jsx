@@ -14,7 +14,7 @@ export default function Events() {
   const [registeringEvent, setRegisteringEvent] = useState(null);
   const [currentUserId, setCurrentUserId] = useState(null);
   const [categories, setCategories] = useState([]);
-  const [userInfo, setUserInfo] = useState(null); // Nouveau état pour les infos utilisateur
+  const [userInfo, setUserInfo] = useState(null);
   const router = useRouter();
 
   const [filters, setFilters] = useState([
@@ -79,7 +79,7 @@ export default function Events() {
       if (result.success && result.data) {
         const userId = result.data.userId || result.data._id;
         setCurrentUserId(userId);
-        setUserInfo(result.data); // Sauvegarder les infos utilisateur
+        setUserInfo(result.data);
         console.log("Utilisateur connecté, ID:", userId);
         return userId;
       }
@@ -374,9 +374,6 @@ export default function Events() {
   };
 
   const getButtonText = (event) => {
-    if (isPastEvent(event)) {
-      return "Voir le replay";
-    }
     if (event.status === "registered") {
       return "Inscrit";
     }
@@ -394,7 +391,6 @@ export default function Events() {
 
   const isButtonDisabled = (event) => {
     return (
-      isPastEvent(event) ||
       event.status === "registered" ||
       (event.maxParticipants &&
         (event.participants?.length || 0) >= event.maxParticipants) ||
@@ -409,6 +405,11 @@ export default function Events() {
 
   const refreshEvents = () => {
     fetchEvents();
+  };
+
+  // Fonction pour afficher le prix ou "Entrée gratuite"
+  const displayPrice = (price) => {
+    return price === 0 ? "Entrée gratuite" : `${price} DA`;
   };
 
   return (
@@ -430,7 +431,7 @@ export default function Events() {
             Événements
           </h1>
           <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-12">
-            Un programme d’événements conçu pour accompagner l’évolution et l’excellence en cosmétologie.
+            Un programme d'événements conçu pour accompagner l'évolution et l'excellence en cosmétologie.
           </p>
 
           {/* Filtres */}
@@ -570,24 +571,18 @@ export default function Events() {
                           </span>
                         </div>
                         <div className="text-[#4b2c5e] font-semibold">
-                          {event.memberPrice} DA
+                          {isFreeEvent ? "Entrée gratuite" : `${event.memberPrice} DA`}
                         </div>
                       </div>
 
                       <div className="flex justify-between items-center">
                         <button
-                          onClick={() =>
-                            isPastEvent(event)
-                              ? handleViewDetails(event)
-                              : handleRegister(event)
-                          }
+                          onClick={() => handleRegister(event)}
                           disabled={isDisabled}
                           className={`px-4 py-2 rounded-md text-sm font-medium flex items-center justify-center min-w-[120px] ${
-                            isPastEvent(event)
-                              ? "bg-gray-600 text-white hover:bg-gray-700"
-                              : event.status === "registered"
-                                ? "bg-green-600 text-white hover:bg-green-700"
-                                : "bg-[#4b2c5e] text-white hover:bg-[#4b2c5e]"
+                            event.status === "registered"
+                              ? "bg-green-600 text-white hover:bg-green-700"
+                              : "bg-[#4b2c5e] text-white hover:bg-[#4b2c5e]"
                           } transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed`}
                         >
                           {isRegistering ? (

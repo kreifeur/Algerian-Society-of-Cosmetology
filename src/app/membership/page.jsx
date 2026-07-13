@@ -119,27 +119,27 @@ export default function Membership() {
 
   const benefits = [
     {
-      icon: "🎓",
+      icon: "",
       title: "Formations & webinaires",
       description: "Participez à des formations continues et webinaires pour renforcer vos compétences.",
     },
     {
-      icon: "💸",
+      icon: "",
       title: "Tarifs préférentiels",
       description: "Bénéficiez de réductions sur les frais d'inscription à nos événements scientifiques et professionnels.",
     },
     {
-      icon: "💼",
+      icon: "",
       title: "Opportunités professionnelles",
       description: "Accédez à des offres de stage et d'emploi dans le secteur de la cosmétologie.",
     },
     {
-      icon: "🌐",
+      icon: "",
       title: "Espace membre dédié",
       description: "Profitez d'un accès exclusif à votre espace personnel sur le site de l'ASCo.",
     },
     {
-      icon: "📰",
+      icon: "",
       title: "Newsletter & actualités",
       description: "Recevez régulièrement nos informations, publications et actualités du secteur.",
     },

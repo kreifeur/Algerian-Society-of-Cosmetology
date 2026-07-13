@@ -1,0 +1,8 @@
+{
+  "/membership/page": "app/membership/page.js",
+  "/events/page": "app/events/page.js",
+  "/about/page": "app/about/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/contact/page": "app/contact/page.js"
+}

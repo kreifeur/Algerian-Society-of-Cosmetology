@@ -378,7 +378,7 @@ const Events = () => {
     const isFreeEvent = event.memberPrice === 0 && event.nonMemberPrice === 0;
 
     if (isFreeEvent) {
-      return <span className="text-green-600 font-semibold">Gratuit</span>;
+      return <span className="text-green-600 font-semibold">Entrée gratuite</span>;
     } else {
       const userPrice = event.memberPrice;
 
