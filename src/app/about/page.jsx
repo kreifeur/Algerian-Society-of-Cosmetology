@@ -2,7 +2,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import aboutimage from "../../../public/FB_IMG_1773061832719.jpg";
 import member1 from "../../../public/Selka.jpg";
 import member2 from "../../../public/Terguia.JPG";
 import member3 from "../../../public/Touileb.JPG";
@@ -77,12 +76,19 @@ export default function About() {
                 </div>
               </div>
               <div className="md:w-1/2">
-                <div className=" rounded-lg h-80 flex items-center justify-center">
-                  <img
-                    className="h-80 filter rounded-lg "
-                    src={aboutimage.src}
-                    alt=""
-                  />
+                <div className="rounded-lg h-80 flex items-center justify-center">
+                  <video
+                  className="h-80 rounded-lg object-cover w-full"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                >
+                  {/* ✅ Use a direct path string from the public folder */}
+                  <source src="/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag
+                </video>
                 </div>
               </div>
             </div>
@@ -143,7 +149,6 @@ export default function About() {
                     </h4>
                     <p>
                       Servir la science, le public et les autorités par une approche collaborative et rigoureuse. 
-
                     </p>
                   </div>
                 </div>
@@ -160,22 +165,18 @@ export default function About() {
                     <h4 className="text-lg font-semibold mb-2">Rigueur scientifique</h4>
                     <p>
                       garante de crédibilité et de fiabilité avec la science et le savoir comme moteur de la démarche
-
                     </p>
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2"> Indépendance et transparence</h4>
                     <p>
                       pour préserver l’intégrité et la confiance du secteur.
-
                     </p>
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2">Ancrage local et ouverture sur le monde</h4>
                     <p>
                       pour conjuguer authenticité et excellence internationale. 
-
-
                     </p>
                   </div>
                 </div>
@@ -185,7 +186,7 @@ export default function About() {
         </section>
 
         {/* Chiffres clés */}
-       {/*  <section className="py-16 px-6 bg-white">
+        {/* <section className="py-16 px-6 bg-white">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center text-[#4b2c5e] mb-12">
               L'association en chiffres
@@ -292,8 +293,6 @@ export default function About() {
                 </div>
               </div>
 
-              
-
               {/* SG adjoint */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
@@ -326,7 +325,7 @@ export default function About() {
                 </div>
               </div>
 
-               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
                   style={{ backgroundImage: `url(${member4.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
@@ -341,7 +340,7 @@ export default function About() {
                 </div>
               </div>
 
-               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                 <div
                   style={{ backgroundImage: `url(${member1.src})` }}
                   className="h-48 bg-center bg-contain bg-no-repeat bg-white "
