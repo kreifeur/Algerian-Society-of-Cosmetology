@@ -86,7 +86,7 @@ export default function About() {
                   controls
                 >
                   {/* ✅ Use a direct path string from the public folder */}
-                  <source src="/video.mp4" type="video/mp4" />
+                  <source src="https://res.cloudinary.com/dlr034bds/video/upload/v1784055057/ydi5du8xx4zuupv7r2ii.mp4" type="video/mp4" />
                   Your browser does not support the video tag
                 </video>
                 </div>
