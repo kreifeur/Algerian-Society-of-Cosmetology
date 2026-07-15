@@ -23,7 +23,7 @@ export default function BlogList() {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
   const [searchQuery, setSearchQuery] = useState("");
   const [blogPosts, setBlogPosts] = useState([]);
-  const [popularPosts, setPopularPosts] = useState([]);
+  const [popularPosts, setPopularPosts] = useState([])
   const [loading, setLoading] = useState(true);
 
   // Fetch blog posts from API
@@ -41,6 +41,7 @@ export default function BlogList() {
       setLoading(true);
       const response = await fetch("/api/articles");
       const data = await response.json();
+      console.log(data)
 
       if (data.success) {
         // Transform API data to match component structure
@@ -61,6 +62,7 @@ export default function BlogList() {
           publishedAt: article.publishedAt,
           createdAt: article.createdAt,
           updatedAt: article.updatedAt,
+          featuredImage:article.featuredImage
         }));
 
         setBlogPosts(transformedPosts);
@@ -93,6 +95,7 @@ export default function BlogList() {
             readTime: `${Math.ceil(article.content.length / 1000)} min read`,
             viewCount: article.views,
             content: article.content,
+            featuredImage:article.featuredImage
           }));
 
         setPopularPosts(popular);
@@ -189,7 +192,11 @@ export default function BlogList() {
                       className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer block"
                     >
                       <div className="bg-gray-200 aspect-video flex items-center justify-center">
-                        <span className="text-gray-500">Image</span>
+                        <img
+                            src={post.featuredImage}
+                            alt="Gallery image"
+                            className="w-full h-full object-cover"
+                          />
                       </div>
                       <div className="p-6">
                         <div className="flex justify-between items-center mb-3">
@@ -250,7 +257,11 @@ export default function BlogList() {
                   className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer block"
                 >
                   <div className="bg-gray-200 aspect-video flex items-center justify-center">
-                    <span className="text-gray-500">Image</span>
+                    <img
+                            src={post.featuredImage}
+                            alt="Gallery image"
+                            className="w-full h-full object-cover"
+                          />
                   </div>
                   <div className="p-4">
                     <span className="px-2 py-1 bg-[#4b2c5e] text-white rounded-full text-xs">
