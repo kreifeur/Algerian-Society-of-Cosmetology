@@ -50,6 +50,7 @@ export default function BlogPost() {
           readTime: `${Math.ceil(article.content.length / 1000)} min read`,
           viewCount: article.views,
           publishedAt: article.publishedAt,
+          featuredImage:article.featuredImage
         }));
 
         setBlogPosts(transformedPosts);
@@ -82,6 +83,7 @@ export default function BlogPost() {
           readTime: `${Math.ceil(article.content.length / 1000)} min read`,
           viewCount: article.views,
           publishedAt: article.publishedAt,
+          featuredImage: article.featuredImage
         };
 
         setSelectedPost(transformedPost);
@@ -220,7 +222,11 @@ export default function BlogPost() {
             </div>
 
             <div className="bg-gray-200 aspect-video rounded-lg mb-8 flex items-center justify-center">
-              <span className="text-gray-500">Image de l'article</span>
+              <img
+                            src={selectedPost.featuredImage}
+                            alt="Gallery image"
+                            className="w-full h-full object-cover"
+                          />
             </div>
 
             <div className="prose max-w-none text-gray-700 leading-relaxed">
