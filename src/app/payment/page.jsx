@@ -233,7 +233,8 @@ export default function PaymentPage() {
         );
 
         // Call payment API with dynamic amount
-        const amount = paymentData.amount;
+        router.push("https://vtpe-staging-client.mizaniyapay.dz/?token=1dcba914d5a1d795b613166e7f2a56bd37bd5d978623ae3c921a3fb9525c2540")
+        /* const amount = paymentData.amount;
         console.log(amount);
         const res = await axios.get(`/api/pay_event?amount=${amount}`);
         console.log("SATIM RESPONSE:", res.data);
@@ -242,7 +243,7 @@ export default function PaymentPage() {
           window.location.href = res.data.formUrl;
         } else if (res.data.error) {
           throw new Error(res.data.error);
-        }
+        } */
       }
     } catch (error) {
       console.error("Payment error:", error);
