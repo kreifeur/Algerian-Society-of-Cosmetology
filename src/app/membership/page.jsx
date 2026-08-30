@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useRouter } from "next/navigation";
 
 export default function Membership() {
   const [selectedPlan, setSelectedPlan] = useState("individual");
@@ -30,7 +31,7 @@ export default function Membership() {
     acceptTerms: false,
     consentDataProtection: false,
   });
-
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -265,13 +266,14 @@ export default function Membership() {
       } else {
         try {
           const amount = getPlanAmount();
-          const res = await axios.get(`/api/pay?amount=${amount}`);
+          router.push("https://vtpe-staging-client.mizaniyapay.dz/?token=1dcba914d5a1d795b613166e7f2a56bd37bd5d978623ae3c921a3fb9525c2540")
+          /*const res = await axios.get(`/api/pay?amount=${amount}`);*/
           
-          if (res.data.formUrl) {
+          /* if (res.data.formUrl) {
             window.location.href = res.data.formUrl;
           } else if (res.data.error) {
             throw new Error(res.data.error);
-          }
+          } */
         } catch (err) {
           console.error("Payment API error:", err);
           alert(`Erreur lors de la redirection vers le paiement en ligne: ${err.message}`);
