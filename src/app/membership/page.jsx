@@ -636,34 +636,33 @@ export default function Membership() {
                     </div>
                   </div>
 
-                  {/* Payment Button with CIB Logo Outside */}
-                  <div className="mb-8 text-center">
-                    {selectedPaymentMethod === "online" && (
-                      <div className="flex items-center justify-center mb-4">
-                        <span className="text-sm font-medium text-gray-600 mr-2">Paiement sécurisé par</span>
+                  {/* Payment Button with CIB Logo on the Left */}
+                  <div className="mb-8">
+                    <div className="flex items-center justify-center gap-3">
+                      {selectedPaymentMethod === "online" && (
                         <img
                           src="/cib_logo.png"
                           alt="CIB"
-                          className="h-8"
+                          className="h-10"
                         />
-                      </div>
-                    )}
-                    <button 
-                      onClick={handleSubmit} 
-                      disabled={isProcessing || !formData.acceptTerms || !formData.consentDataProtection || !recaptchaToken} 
-                      className={`relative inline-flex items-center justify-center px-10 py-4 rounded-lg font-semibold text-lg shadow-lg disabled:opacity-50 disabled:cursor-not-allowed min-w-[300px] ${selectedPaymentMethod === "cash" ? "bg-green-600 text-white" : "bg-[#4b2c5e] text-white"}`}
-                    >
-                      {isProcessing ? (
-                        <>
-                          <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white mr-3"></div>
-                          Traitement en cours...
-                        </>
-                      ) : selectedPaymentMethod === "cash" ? (
-                        "Finaliser l'adhésion (paiement par cash)"
-                      ) : (
-                        "Procéder au paiement sécurisé"
                       )}
-                    </button>
+                      <button 
+                        onClick={handleSubmit} 
+                        disabled={isProcessing || !formData.acceptTerms || !formData.consentDataProtection || !recaptchaToken} 
+                        className={`relative inline-flex items-center justify-center px-10 py-4 rounded-lg font-semibold text-lg shadow-lg disabled:opacity-50 disabled:cursor-not-allowed min-w-[300px] ${selectedPaymentMethod === "cash" ? "bg-green-600 text-white" : "bg-[#4b2c5e] text-white"}`}
+                      >
+                        {isProcessing ? (
+                          <>
+                            <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white mr-3"></div>
+                            Traitement en cours...
+                          </>
+                        ) : selectedPaymentMethod === "cash" ? (
+                          "Finaliser l'adhésion (paiement par cash)"
+                        ) : (
+                          "Procéder au paiement sécurisé"
+                        )}
+                      </button>
+                    </div>
                   </div>
 
                   <div className="flex justify-between items-center pt-6 border-t">
