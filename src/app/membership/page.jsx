@@ -178,6 +178,12 @@ export default function Membership() {
     if (!formData.currentPosition.trim()) newErrors.currentPosition = "La fonction actuelle est requise";
     if (!formData.establishmentName.trim()) newErrors.establishmentName = "Le nom de l'établissement/entreprise est requis";
     if (!formData.sectorActivity) newErrors.sectorActivity = "Le secteur d'activité est requis";
+    if (!formData.acceptTerms) {
+      newErrors.acceptTerms = "Vous devez accepter les conditions générales";
+    }
+    if (!formData.consentDataProtection) {
+      newErrors.consentDataProtection = "Vous devez accepter le traitement de vos données personnelles";
+    }
     
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -185,12 +191,7 @@ export default function Membership() {
 
   const validateStep2 = () => {
     const newErrors = {};
-    if (!formData.acceptTerms) {
-      newErrors.acceptTerms = "Vous devez accepter les conditions générales";
-    }
-    if (!formData.consentDataProtection) {
-      newErrors.consentDataProtection = "Vous devez accepter le traitement de vos données personnelles";
-    }
+    // No validation needed for step 2 anymore since terms are in step 1
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -346,7 +347,7 @@ export default function Membership() {
                   <div className={`h-1 flex-1 mx-2 ${currentStep >= 2 ? "bg-[#4b2c5e]" : "bg-gray-200"}`}></div>
                   <div className={`flex flex-col items-center ${currentStep >= 2 ? "text-[#4b2c5e]" : "text-gray-400"}`}>
                     <div className={`h-10 w-10 rounded-full flex items-center justify-center ${currentStep >= 2 ? "bg-[#4b2c5e] text-white" : "bg-gray-200"}`}>2</div>
-                    <span className="mt-2 text-sm font-medium">Conditions</span>
+                    <span className="mt-2 text-sm font-medium">Plan & Paiement</span>
                   </div>
                   <div className={`h-1 flex-1 mx-2 ${currentStep >= 3 ? "bg-[#4b2c5e]" : "bg-gray-200"}`}></div>
                   <div className={`flex flex-col items-center ${currentStep >= 3 ? "text-[#4b2c5e]" : "text-gray-400"}`}>
@@ -356,7 +357,7 @@ export default function Membership() {
                 </div>
               </div>
 
-              {/* Step 1: Personal Information */}
+              {/* Step 1: Personal Information with Terms */}
               {currentStep === 1 && (
                 <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
                   <h2 className="text-2xl font-semibold text-center text-[#4b2c5e] mb-8">Vos informations personnelles</h2>
@@ -515,6 +516,32 @@ export default function Membership() {
                       </div>
                     </div>
 
+                    {/* Terms and Conditions - Moved to Step 1 */}
+                    <div className="mb-6">
+                      <div className={`p-4 border rounded-md ${errors.acceptTerms ? "border-red-500 bg-red-50" : "border-gray-200"}`}>
+                        <div className="flex items-start">
+                          <input type="checkbox" id="acceptTerms" name="acceptTerms" checked={formData.acceptTerms} onChange={handleChange} className="h-4 w-4 text-blue-600 rounded mt-1" />
+                          <label htmlFor="acceptTerms" className="ml-2 block text-sm text-gray-700">
+                            J'accepte les <a href="/conditions-generales" className="text-blue-600 hover:underline" target="_blank">conditions générales</a> et la <a href="/politique-confidentialite" className="text-blue-600 hover:underline" target="_blank">politique de confidentialité</a> *
+                          </label>
+                        </div>
+                        {errors.acceptTerms && <p className="text-red-500 text-sm mt-1">{errors.acceptTerms}</p>}
+                      </div>
+                    </div>
+
+                    {/* Data Protection Consent - Moved to Step 1 */}
+                    <div className="mb-6">
+                      <div className={`p-4 border rounded-md bg-gray-50 ${errors.consentDataProtection ? "border-red-500 bg-red-50" : "border-gray-200"}`}>
+                        <div className="flex items-start">
+                          <input type="checkbox" id="consentDataProtection" name="consentDataProtection" checked={formData.consentDataProtection} onChange={handleChange} className="h-4 w-4 text-blue-600 rounded mt-1" />
+                          <label htmlFor="consentDataProtection" className="ml-2 block text-sm text-gray-700">
+                            J'accepte le traitement de mes données personnelles conformément à la <a href="/protection-donnees" className="text-blue-600 hover:underline" target="_blank">loi n°18-07 relative à la protection des données à caractère personnel</a>, uniquement pour les besoins et activités de l'association. *
+                          </label>
+                        </div>
+                        {errors.consentDataProtection && <p className="text-red-500 text-sm mt-1">{errors.consentDataProtection}</p>}
+                      </div>
+                    </div>
+
                     <div className="text-center">
                       <button onClick={nextStep} className="px-8 py-3 bg-[#4b2c5e] text-white rounded-md hover:bg-[#4b2c5e] font-medium text-lg">Continuer</button>
                     </div>
@@ -522,10 +549,10 @@ export default function Membership() {
                 </div>
               )}
 
-              {/* Step 2: Conditions */}
+              {/* Step 2: Plan & Payment Method */}
               {currentStep === 2 && (
                 <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
-                  <h2 className="text-2xl font-semibold text-center text-[#4b2c5e] mb-8">Conditions d'adhésion</h2>
+                  <h2 className="text-2xl font-semibold text-center text-[#4b2c5e] mb-8">Choisissez votre formule et mode de paiement</h2>
                   <form onSubmit={(e) => e.preventDefault()}>
                     {/* Membership Plan Selection */}
                     <div className="mb-8">
@@ -543,51 +570,28 @@ export default function Membership() {
                     </div>
 
                     {/* Payment Method Selection */}
-                    <div className="flex flex-col gap-2 my-6">
-                      <div className={`border p-3 cursor-pointer rounded-md ${selectedPaymentMethod === "cash" ? "border-[#4b2c5e] bg-[#ddd3e6]" : "border-gray-300"}`} onClick={() => handlePaymentMethodChange("cash")}>
-                        <div className="flex items-center">
-                          <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${selectedPaymentMethod === "cash" ? "border-[#4b2c5e] bg-[#4b2c5e]" : "border-gray-400"}`}>
-                            {selectedPaymentMethod === "cash" && <div className="w-2 h-2 rounded-full bg-white"></div>}
+                    <div className="mb-8">
+                      <h3 className="text-lg font-semibold text-[#4b2c5e] mb-4">Choisissez votre mode de paiement</h3>
+                      <div className="flex flex-col gap-2">
+                        <div className={`border p-3 cursor-pointer rounded-md ${selectedPaymentMethod === "cash" ? "border-[#4b2c5e] bg-[#ddd3e6]" : "border-gray-300"}`} onClick={() => handlePaymentMethodChange("cash")}>
+                          <div className="flex items-center">
+                            <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${selectedPaymentMethod === "cash" ? "border-[#4b2c5e] bg-[#4b2c5e]" : "border-gray-400"}`}>
+                              {selectedPaymentMethod === "cash" && <div className="w-2 h-2 rounded-full bg-white"></div>}
+                            </div>
+                            <span className="font-medium">Paiement par cash</span>
                           </div>
-                          <span className="font-medium">Paiement par cash</span>
+                          <p className="text-sm text-gray-600 mt-1 ml-8">Payez en espèces lors de votre visite à notre siège</p>
                         </div>
-                        <p className="text-sm text-gray-600 mt-1 ml-8">Payez en espèces lors de votre visite à notre siège</p>
-                      </div>
 
-                      <div className={`border p-3 cursor-pointer rounded-md ${selectedPaymentMethod === "online" ? "border-[#4b2c5e] bg-[#ddd3e6]" : "border-gray-300"}`} onClick={() => handlePaymentMethodChange("online")}>
-                        <div className="flex items-center">
-                          <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${selectedPaymentMethod === "online" ? "border-[#4b2c5e] bg-[#4b2c5e]" : "border-gray-400"}`}>
-                            {selectedPaymentMethod === "online" && <div className="w-2 h-2 rounded-full bg-white"></div>}
+                        <div className={`border p-3 cursor-pointer rounded-md ${selectedPaymentMethod === "online" ? "border-[#4b2c5e] bg-[#ddd3e6]" : "border-gray-300"}`} onClick={() => handlePaymentMethodChange("online")}>
+                          <div className="flex items-center">
+                            <div className={`w-5 h-5 rounded-full border mr-3 flex items-center justify-center ${selectedPaymentMethod === "online" ? "border-[#4b2c5e] bg-[#4b2c5e]" : "border-gray-400"}`}>
+                              {selectedPaymentMethod === "online" && <div className="w-2 h-2 rounded-full bg-white"></div>}
+                            </div>
+                            <span className="font-medium">Paiement en ligne par CIB/DHAHABIA</span>
                           </div>
-                          <span className="font-medium">Paiement en ligne par CIB/DHAHABIA</span>
+                          <p className="text-sm text-gray-600 mt-1 ml-8">Paiement sécurisé via la plateforme SATIM</p>
                         </div>
-                        <p className="text-sm text-gray-600 mt-1 ml-8">Paiement sécurisé via la plateforme SATIM</p>
-                      </div>
-                    </div>
-
-                    {/* Terms and Conditions */}
-                    <div className="mb-6">
-                      <div className={`p-4 border rounded-md ${errors.acceptTerms ? "border-red-500 bg-red-50" : "border-gray-200"}`}>
-                        <div className="flex items-start">
-                          <input type="checkbox" id="acceptTerms" name="acceptTerms" checked={formData.acceptTerms} onChange={handleChange} className="h-4 w-4 text-blue-600 rounded mt-1" />
-                          <label htmlFor="acceptTerms" className="ml-2 block text-sm text-gray-700">
-                            J'accepte les <a href="/conditions-generales" className="text-blue-600 hover:underline" target="_blank">conditions générales</a> et la <a href="/politique-confidentialite" className="text-blue-600 hover:underline" target="_blank">politique de confidentialité</a> *
-                          </label>
-                        </div>
-                        {errors.acceptTerms && <p className="text-red-500 text-sm mt-1">{errors.acceptTerms}</p>}
-                      </div>
-                    </div>
-
-                    {/* Data Protection Consent */}
-                    <div className="mb-6">
-                      <div className={`p-4 border rounded-md bg-gray-50 ${errors.consentDataProtection ? "border-red-500 bg-red-50" : "border-gray-200"}`}>
-                        <div className="flex items-start">
-                          <input type="checkbox" id="consentDataProtection" name="consentDataProtection" checked={formData.consentDataProtection} onChange={handleChange} className="h-4 w-4 text-blue-600 rounded mt-1" />
-                          <label htmlFor="consentDataProtection" className="ml-2 block text-sm text-gray-700">
-                            J'accepte le traitement de mes données personnelles conformément à la <a href="/protection-donnees" className="text-blue-600 hover:underline" target="_blank">loi n°18-07 relative à la protection des données à caractère personnel</a>, uniquement pour les besoins et activités de l'association. *
-                          </label>
-                        </div>
-                        {errors.consentDataProtection && <p className="text-red-500 text-sm mt-1">{errors.consentDataProtection}</p>}
                       </div>
                     </div>
 
