@@ -636,8 +636,18 @@ export default function Membership() {
                     </div>
                   </div>
 
-                  {/* Payment Button */}
+                  {/* Payment Button with CIB Logo Outside */}
                   <div className="mb-8 text-center">
+                    {selectedPaymentMethod === "online" && (
+                      <div className="flex items-center justify-center mb-4">
+                        <span className="text-sm font-medium text-gray-600 mr-2">Paiement sécurisé par</span>
+                        <img
+                          src="/cib_logo.png"
+                          alt="CIB"
+                          className="h-8"
+                        />
+                      </div>
+                    )}
                     <button 
                       onClick={handleSubmit} 
                       disabled={isProcessing || !formData.acceptTerms || !formData.consentDataProtection || !recaptchaToken} 
@@ -651,14 +661,7 @@ export default function Membership() {
                       ) : selectedPaymentMethod === "cash" ? (
                         "Finaliser l'adhésion (paiement par cash)"
                       ) : (
-                        <>
-                          Procéder au paiement sécurisé
-                          <img
-                            src="/cib_logo.png"
-                            alt="CIB"
-                            className="h-8 ml-2"
-                          />
-                        </>
+                        "Procéder au paiement sécurisé"
                       )}
                     </button>
                   </div>
