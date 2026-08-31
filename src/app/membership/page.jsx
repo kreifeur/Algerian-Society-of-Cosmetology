@@ -634,7 +634,11 @@ export default function Membership() {
 
                   {/* Payment Button */}
                   <div className="mb-8 text-center">
-                    <button onClick={handleSubmit} disabled={isProcessing || !formData.acceptTerms || !formData.consentDataProtection || !recaptchaToken} className={`relative inline-flex items-center justify-center px-10 py-4 rounded-lg font-semibold text-lg shadow-lg disabled:opacity-50 disabled:cursor-not-allowed min-w-[300px] ${selectedPaymentMethod === "cash" ? "bg-green-600 text-white" : "bg-[#4b2c5e] text-white"}`}>
+                    <button 
+                      onClick={handleSubmit} 
+                      disabled={isProcessing || !formData.acceptTerms || !formData.consentDataProtection || !recaptchaToken} 
+                      className={`relative inline-flex items-center justify-center px-10 py-4 rounded-lg font-semibold text-lg shadow-lg disabled:opacity-50 disabled:cursor-not-allowed min-w-[300px] ${selectedPaymentMethod === "cash" ? "bg-green-600 text-white" : "bg-[#4b2c5e] text-white"}`}
+                    >
                       {isProcessing ? (
                         <>
                           <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white mr-3"></div>
@@ -643,7 +647,14 @@ export default function Membership() {
                       ) : selectedPaymentMethod === "cash" ? (
                         "Finaliser l'adhésion (paiement par cash)"
                       ) : (
-                        "Procéder au paiement sécurisé"
+                        <>
+                          Procéder au paiement sécurisé
+                          <img
+                            src="/cib_logo.png"
+                            alt="CIB"
+                            className="h-8 ml-2"
+                          />
+                        </>
                       )}
                     </button>
                   </div>
