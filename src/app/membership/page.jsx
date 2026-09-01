@@ -641,7 +641,7 @@ export default function Membership() {
                     <div className="flex items-center justify-center gap-3">
                       {selectedPaymentMethod === "online" && (
                         <img
-                          src="/cib_logo.png"
+                          src="/cib_logo.jpeg"
                           alt="CIB"
                           className="h-10"
                         />
