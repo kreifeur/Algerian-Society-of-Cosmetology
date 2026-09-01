@@ -915,7 +915,7 @@ export default function PaymentPage() {
                         </svg>
                         <span className="text-sm">Payer maintenant</span>
                         <img
-                          src="/cib_logo.png"
+                          src="/cib_logo.jpeg"
                           alt="CIB"
                           className="h-8 ml-2"
                           onError={(e) => {
